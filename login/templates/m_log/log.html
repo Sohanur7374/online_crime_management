@@ -1,0 +1,45 @@
+{% extends 'user/base.html' %}
+{% block content %}
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
+			</div>
+			<div class="card-body">
+				<form action="userlogin" method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+					<select name="userselect" class="form-control mb-3" id="">
+						<option value="" selected disabled>-- Select User Type --</option>
+						<option value="Police">Police</option>
+						<option value="User">User</option>
+					</select>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="email" name="uemail" class="form-control" placeholder="Email" required>
+
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="password" class="form-control" placeholder="password" required>
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<input type="submit" value="Login" class="btn float-right login_btn">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
