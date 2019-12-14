@@ -26,7 +26,7 @@ def viewComplain(request):
        #return render(request, 'police/dashbord.html')
 
 def viewUser(request):
-    users=userregistration.objects.all()
+      users=userregistration.objects.all()
 
-    return render(request, 'police/viewuser.html', {'users': users})
+      return render(request, 'police/viewuser.html', {'users': users})
     #return render(request, 'police/dashbord.html')
