@@ -20,13 +20,20 @@ def preg(request):
 
 def viewComplain(request):
        print(111)
-       complain=Complain.objects.all()
+       complain = Complain.objects.all()
        print(222)
        return render(request, 'police/viewcomplain.html', {'complain': complain})
-       #return render(request, 'police/dashbord.html')
+
 
 def viewUser(request):
-      users=userregistration.objects.all()
 
-      return render(request, 'police/viewuser.html', {'users': users})
+    users= userregistration.objects.all()
+
+    return render(request, 'police/viewuser.html', {'users': users})
     #return render(request, 'police/dashbord.html')
+def others(request):
+    return render(request, 'police/other.html')
+def viewedit(request):
+    editcom= Complain.object.all()
+
+    return render(request, 'police/complainedit.html'), {'editcom': editcom}

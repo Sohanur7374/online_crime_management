@@ -10,3 +10,4 @@ class Complain(models.Model):
     Thana = models.CharField(max_length=55, blank=False)
     Address = models.CharField(max_length=55, blank=False)
     Complain_description = models.CharField(max_length=55)
+

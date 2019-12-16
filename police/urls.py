@@ -19,7 +19,10 @@ from . import views
 
 urlpatterns = [
     path('preg', views.preg, name="preg"),
-path('viewComplain/', views.viewComplain, name="viewComplain"),
-path('viewUser/', views.viewUser, name="viewUser"),
+    path('viewComplain/', views.viewComplain, name="viewComplain"),
+    path('others/', views.others, name="others"),
+    path('police/', views.viewedit, name="viewedit"),
+    path('viewUser/', views.viewUser, name="viewUser"),
     path('admin/', admin.site.urls),
+
 ]
