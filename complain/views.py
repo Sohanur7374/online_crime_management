@@ -19,4 +19,4 @@ def ucom(request):
         addcomplain.save()
         return render(request, 'user/home.html')
     else:
-        pass
+        return render(request, 'complain/complain.html')

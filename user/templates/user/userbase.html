@@ -1,4 +1,5 @@
-{% extends "police/base.html" %} {% block content %}
+{% extends "user/ubas.html" %}
+{% block content %}
 	<style>
 		.nav-side-menu {
   overflow: auto;
@@ -226,95 +227,101 @@ body {
 <link href="font-awesome.min.css" rel="stylesheet">
 
 <div class="pageContainer">
-    <div class="head">
-  <div class="header-right">
-
+  <div class="head">
+  <div class="header-right" >
 
   </div>
 
 </div>
 <div class="nav-side-menu">
     <div class="brand">Crime Management System</div>
+
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
         <div class="menu-list">
 
             <ul id="menu-content" class="menu-content collapse out">
-               <a href="#">
-                  <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a href="{% url 'dashboard' %}">
+                  <li data-toggle="collapse" data-target="#service" class="collapsed active">
                   <i class="fa fa-user fa-lg"></i> Dashboard
                 </li>
                 </a>
 
-              <a href="{% url 'viewComplain'%}">
-                  <li data-toggle="collapse" data-target="#service" class="collapsed active">
-                  <i class="fa fa-user fa-lg"></i> Show Crime Lists
-                </li>
-                </a>
-                <a href="{% url 'viewUser'%}">
+                <a href="{% url 'ucom' %}">
                   <li data-toggle="collapse" data-target="#service" class="collapsed ">
-                  <i class="fa fa-user fa-lg"></i> User Lists
+                  <i class="fa fa-user fa-lg"></i> Complain
                 </li>
                 </a>
-
-
-
-
-
-
+                <a href="">
+                  <li data-toggle="collapse" data-target="#service" class="collapsed ">
+                  <i class="fa fa-user fa-lg"></i> See your Profile
+                </li>
+                </a>
+                 <a href="#">
+                  <li data-toggle="collapse" data-target="#service" class="collapsed ">
+                  <i class="fa fa-user fa-lg"></i> Edit Complain
+                </li>
+                </a>
             </ul>
      </div>
 </div>
 
-            <div class="container">
-                        <div class="row col-md-12 col-md-offset-5 custyle">
+<div class="mainContainer">
 
 
-                            <div class="mainContainer">
+  <div class="leftSection">
 
+      <div class="formContainer">
 
-                                <div class="leftSection">
+      <div class="container">
+    <div class="row col-md-12 col-md-offset-5 custyle">
 
-                                    <div class="formContainer">
-                                    <table class="table table-striped custab">
-
-                                                <thead>
-
-
-    <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
-
-        <tr>
-              <th> Complain Type</th>
-              <th>Complain Name</th>
-             <th> Mobile Number </th>
-              <th>District</th>
-             <th> Thana </th>
-              <th>Address</th>
-             <th>Complain description</th>
-
-        </tr>
-    </thead>
-            {% for complains in complain %}
-            <tr>
-                <td>{{complains.Complain_type}}</td>
-                <td>{{complains.Complainant_name}}</td>
-                <td>{{complains.Mobile_Number}}</td>
-                <td>{{complains.District}}</td>
-                <td>{{complains.Thana}}</td>
-                <td>{{complains.Address}}</td>
-                 <td>{{complains.Complain_description}}</td>
-
-                <td><input type="submit" name="edit" value="Edit"></td>
-                <td><input type="submit" name="delete" value="Delete"></td>
-                <td><input type="submit" name="image" value="Image"></td>
-
-            </tr>
-            {% endfor %}
-    </table>
+    <!--Carousel Wrapper-->
+<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#video-carousel-example" data-slide-to="1"></li>
+    <li data-target="#video-carousel-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--Carousel Wrapper-->
     </div>
 </div>
 </div>
   </div>
+
+
 </div>
  </div>
 

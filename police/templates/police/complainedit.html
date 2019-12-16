@@ -1,0 +1,30 @@
+
+<div>
+ <form action="Complainedit" method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+
+    <table class="table table-striped custab">
+
+                                                <thead>
+
+
+    <!-- <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a> -->
+
+
+    </thead>
+            {% for editcom in editcom %}
+            <tr>
+                <td>{{complains.Complain_type}}</td>
+                <td>{{complains.Complainant_name}}</td>
+                <td>{{complains.Mobile_Number}}</td>
+                <td>{{complains.District}}</td>
+                <td>{{complains.Thana}}</td>
+                <td>{{complains.Address}}</td>
+                 <td>{{complains.Complain_description}}</td>
+
+
+            </tr>
+            {% endfor %}
+    </table>
+      </form>
+    </div>
